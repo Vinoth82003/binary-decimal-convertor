@@ -1,0 +1,345 @@
+*{
+    margin: 0%;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #444444;
+    transition: .3s;
+}
+
+.light.container{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    background: #eeeeee;
+}
+
+.inner-container{
+    width: 300px;
+    max-width: 500px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    background: #ffff;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    transition: .3s;
+}
+
+.light .inner-container{
+    width: 300px;
+    max-width: 500px;
+    padding: 20px 15px;
+    border-radius: 5px;
+    background: #505050;
+    min-height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+}
+
+.input-box{
+    width: 280px;
+    background: #e7e7e7;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    transition: .3s;
+}
+
+.light .input-box{
+    width: 280px;
+    background: #d6d6d6;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+}
+
+.inputfield{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 10px;
+    transition: .3s;
+}
+
+input {
+    width: 240px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #005200;
+    background: #9fff9c;
+    color: #005200;
+    outline: none;
+}
+
+.light input {
+    width: 240px;
+    padding: 10px;
+    border-radius: 4px;
+    border: 2px solid #070599;
+    background: #dffdde;
+    color: #000152;
+    outline: none;
+}
+
+input:focus{
+    background: #caffc8;
+    box-shadow: 0px 0px 10px #15ff00;
+    border: 2px dashed #005200;
+}
+
+.light input:focus{
+    background: #c8ccff;
+    box-shadow: 0px 0px 10px #003cff;
+    border: 2px dashed #010052;
+}
+
+.btn{
+    padding: 10px 20px;
+    margin-top: 10px;
+    background: #060aff;
+    text-transform: capitalize;
+    color: #ffff;
+    font-weight: 700;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.btn:hover{
+    background: #0104cf; 
+}
+
+.output-box{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #93d490;
+    border-top: 2px solid;
+    width: 100%;
+    padding: 20px 0px 0px 0px;
+    flex-wrap: wrap;
+}
+
+.light .output-box{
+    margin: 20px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    color: #aab6f8;
+    border-top: 2px solid;
+    width: 100%;
+    padding: 20px 0px 0px 0px;
+    flex-wrap: wrap;
+}
+
+p{
+    border: 2px dashed #005200;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #9fff9c;
+    color: #005200;
+    animation: wave .5s ease-in forwards;
+    opacity: 0;
+    text-transform: uppercase;
+}
+
+.light p{
+    border: 2px dashed #000f52;
+    padding: 10px 15px;
+    border-radius: 5px;
+    background: #9ca6ff;
+    color: #010052;
+    animation: lwave .5s ease-in forwards;
+    opacity: 0;
+}
+
+label{
+    padding: 2px 8px;
+    border-bottom: 1px solid ;
+    color: #0539c9;
+    font-weight: 600;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif ;
+    width: 125px;
+}
+
+/* p:nth-child(even){
+    animation-delay: 1s;
+}
+
+
+p:nth-child(odd){
+    animation-delay: .5s;
+} */
+
+@keyframes wave {
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+        background: #ff9c9c;
+        color: #520000;
+    }100%{
+        transform: translateY(0px);
+        opacity: 1;
+        background: #9fff9c;
+        color: #005200;
+    }
+}
+
+@keyframes lwave {
+    0%{
+        transform: translateY(20px);
+        opacity: 0;
+        background: #ff9c9c;
+        color: #520000;
+    }100%{
+        transform: translateY(0px);
+        opacity: 1;
+        background: #f1f1ff;
+        color: #010052;
+    }
+}
+
+.inner-toggle{
+    position: absolute;
+    margin: 30px;
+    width: 200px;
+    height: 30px;
+    background: transparent;
+    border-radius: 5px;
+    transition: .5s;
+    top: -20px;
+    right: -20px;
+}
+
+.toggle{
+    position: absolute;
+    width: 50px;
+    height: 20px;
+    border-radius: 20px;
+    background: #242424;
+    right: 20px;
+    top: 0;
+    margin: 3px;
+    transition: .5s;
+}
+
+.fas.fa-code{
+    position: absolute;
+    right: 4px;
+    font-size: 12px;
+    top: 8px;
+    color: #000000;
+    transition: .5s;
+}
+
+.light .fas.fa-code{
+    position: absolute;
+    right: 4px;
+    font-size: 14px;
+    top: 8px;
+    color: #001aff;
+}
+
+.light .fas.fa-sort-numeric-up{
+    position: absolute;
+    right: 79px;
+    font-size: 12px;
+    top: 8px;
+    color: #1b1b1b;
+    transition: .5s;
+}
+
+.fas.fa-sort-numeric-up{
+    position: absolute;
+    right: 79px;
+    font-size: 14px;
+    top: 8px;
+    color: #0b6108;
+}
+
+.light .toggle{
+    background: #ffffff;
+}
+
+.circle{
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #ddff1c;
+    transition: .5s;
+    cursor: pointer;
+}
+
+.light .circle{
+    position: absolute;
+    left: 0;
+    top: -2px;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%;
+    background: #b3b3b3;
+    left: 25px;
+    
+}
+
+.error.active{
+    position: absolute;
+    padding: 10px 30px;
+    z-index: 10;
+    background: rgb(253, 189, 189);
+    top: 50px;
+    border-radius: 5px;
+    color: rgb(117, 17, 17);
+    text-transform: capitalize;
+    animation: error 4s ease-in forwards;
+}
+
+@keyframes error {
+    0%{
+        top: 50px;
+        opacity: 0;
+    }25%{
+        top: 70px;
+        opacity: 1;
+    }50%{
+        top: 50px;
+        opacity: 1;
+    }75%{
+        top: 50px;
+        opacity: 1;
+    }90%{
+        top: 50px;
+        opacity: 1;
+    }100%{
+        top: -60px;
+        opacity: 0;
+    }
+}
